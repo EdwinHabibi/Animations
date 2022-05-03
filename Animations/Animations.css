@@ -2,15 +2,31 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 body{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(169, 184, 134);
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-x: hidden;
+}
+
+section{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: rgb(169, 184, 134);
 }
+
+
+/* 1) Card - Hover animation */
 
 .card{
     position: relative;
@@ -63,7 +79,7 @@ body{
 }
 
 .card:hover .img_box img{
-    max-width: 50%;
+    max-width: 50%;/* Important hover transition to squeeze the other elements to be visible */
 }
 
 .card .content_box{
@@ -91,7 +107,7 @@ body{
 }
 
 .card .content_box .buy_now-button{
-    position: relative;
+    position: relative;/* Important for hide the "buy-now-botton" */
     text-decoration: none;
     background-color: aquamarine;
     border-radius: 30px;
@@ -108,4 +124,78 @@ body{
 
 .card .content_box .buy_now-button:hover{
     background: rgb(95, 183, 218);
+}
+
+/* 2) Pepsi - Card and image hover effect. Responsive. */
+
+.pepsi_card{
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+.pepsi_card .pepsi_circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.pepsi_card .pepsi_circle::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #d83133;
+    clip-path: circle(120px at center);
+    transition: 0.5s;
+}
+
+.pepsi_card:hover .pepsi_circle:before{
+    background: #0065c3;
+    clip-path: circle(400px at center);
+}
+
+.pepsi_card img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: auto;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.pepsi_card:hover img{
+    left: 72%;
+    height: 500px;
+}
+
+.pepsi_card .pepsi_content{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.pepsi_card:hover .pepsi_content{
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+.pepsi_card .pepsi_content h2{
+    color: white;
 }
