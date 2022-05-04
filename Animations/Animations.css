@@ -19,7 +19,6 @@ body{
 section{
     height: fit-content;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -107,7 +106,7 @@ section{
 }
 
 .card .content_box .buy_now-button{
-    position: relative;/* Important for hide the "buy-now-botton" */
+    position: relative;/* Important to hide the "buy-now-botton" */
     text-decoration: none;
     background-color: aquamarine;
     border-radius: 30px;
