@@ -8,8 +8,43 @@
 
     <!-- Link til CSS -->
     <link rel="stylesheet" href="Animations.css" />
+    <!-- FontAwsome-->
+    <script src="https://kit.fontawesome.com/d5dc01f427.js" crossorigin="anonymous"></script> 
+
   </head>
-  <body>    <!-- Fade in cards - Scroll effect -->
+  <body>
+
+    <nav id="nav_bar">
+      <h1>hej hej</h1>
+    </nav>
+
+    <section>
+      <form class="sign_in-box" action="login.html" method="POST">
+        <h1>Log in</h1>
+        <input type="text" placeholder="Enter Username" id="userName">
+        <input type="password" placeholder="Enter Password" id="passWord">
+        <input type="submit" value="Login" onclick="validate()">
+        <a href="">Lost your password?</a>
+        <a href="">Dont have an account?</a>
+      </form>
+    </section>
+
+    <!-- Card - Hover animation -->
+    <section>
+      <div class="card">
+        <div class="img_box">
+          <img src="./Images/pro-headset-hero.png" alt="" />
+        </div>
+
+        <div class="content_box">
+          <h3>Wireless Headphones</h3>
+          <h2 class="price">$40.<small>99</small></h2>
+          <a href="" class="buy_now-button">Buy now</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Fade in cards - Scroll effect -->
     <section>
       <div class="fade_card-container">
         <div class="row">
@@ -34,21 +69,6 @@
         </div>
       </div>
     </section>
-    <!-- Card - Hover animation -->
-    <section>
-      <div class="card">
-        <div class="img_box">
-          <img src="./Images/pro-headset-hero.png" alt="" />
-        </div>
-
-        <div class="content_box">
-          <h3>Wireless Headphones</h3>
-          <h2 class="price">$40.<small>99</small></h2>
-          <a href="" class="buy_now-button">Buy now</a>
-        </div>
-      </div>
-    </section>
-
 
 
     <!-- Pepsi - Hover animation -->
@@ -62,6 +82,73 @@
         <img src="./Images/pnghut_pepsi-fizzy-drinks-coca-cola-drink-can-one.png" alt="">
       </div>
     </section>
+    <section>
+      <div class="snake_container noselect">
+        <div class="wrapper">
+          <button id="replay">
+            <i class="fas fa-play"></i>
+            RESTART
+          </button>
+          <div id="canvas">
+      
+          </div>
+          <div id="ui">
+            <h2>SCORE
+            </h2>
+            <span id="score">00</span>
+          </div>
+        </div>
+        <div id="author">
+          <h1>SNAKE</h1> <span>by Fariat</span>
+        </div>
+      </div>
+    </section>
+
+    
+    
+    
+    <section class="social_media">
+      <ul class="some">
+        
+        <li data-text="Facebook">
+          <a href="" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </li>
+
+        <li data-text="Youtube">
+          <a href="" class="youtube"><i class="fa-brands fa-youtube"></i></a>
+        </li>
+
+        <li data-text="Twitter">
+          <a href="" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+
+        <li data-text="Instagram">
+          <a href="" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+
+      </ul>
+
+    </section>
+
+    <section class="stacked_card">
+      <div class="stacked_card-container">
+        <div class="s_card" style="--i:-1">Hej</div>
+        <div class="s_card" style="--i:0"></div>
+        <div class="s_card" style="--i:1"></div>
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
 
 <script src="Animation.JS"></script>
   </body>
