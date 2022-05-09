@@ -125,6 +125,44 @@ section{
     background: rgb(95, 183, 218);
 }
 
+/* 3) Fade in card - Scroll card. */
+
+.fade_card-container {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col-33 {
+    width: 33%;
+  }
+  
+  .fade-in {
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(100%);
+    font-size: 1em;
+  }
+  
+  .fade-in.scrolled {
+    opacity: 1;
+    transform: translateY(0);
+    font-size: 2em;
+  }
+  
+  .fade_card {
+    text-align: center;
+    box-shadow: 10px 10px 10px rgb(155, 155, 155);
+    border: 1px solid rgb(155, 155, 155);
+    margin: 25px;
+    padding: 25px;
+  }
+
+
 /* 2) Pepsi - Card and image hover effect. Responsive. */
 
 .pepsi_card{
